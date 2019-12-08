@@ -28,7 +28,7 @@
  * OF SUCH DAMAGE.
  */
 
-namespace SignalWow\KickStart;
+namespace jeremiepasquis\dumpinlog;
 
 use Exception;
 use Monolog\Handler\FirePHPHandler;
