@@ -28,7 +28,7 @@
  * OF SUCH DAMAGE.
  */
 
-namespace jeremiepasquis\dumpinlog;
+namespace JeremiePasquis\DumpInLog;
 
 use Exception;
 use Monolog\Handler\FirePHPHandler;
