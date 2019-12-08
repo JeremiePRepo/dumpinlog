@@ -48,7 +48,15 @@ class DumpInLog
         // Create the logger
         $logger = new Logger('debug');
         // Now add some handlers
-        $logger->pushHandler(new StreamHandler(__DIR__ . '/../../debug.log', Logger::DEBUG));
+        $logger->pushHandler(new StreamHandler(
+            __DIR__ .
+            DIRECTORY_SEPARATOR . '..' .
+            DIRECTORY_SEPARATOR . '..' .
+            DIRECTORY_SEPARATOR . '..' .
+            DIRECTORY_SEPARATOR . '..' .
+            DIRECTORY_SEPARATOR . 'debug.log',
+            Logger::DEBUG
+        ));
         $logger->pushHandler(new FirePHPHandler());
 
         // You can now use your logger
