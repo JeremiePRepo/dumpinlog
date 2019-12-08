@@ -35,19 +35,23 @@ use Monolog\Handler\FirePHPHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
-/**
- * Dump a variable in a log file for debugging purpose
- * @param $var
- * @throws Exception
- */
-function dumpInLog($var)
-{
-    // Create the logger
-    $logger = new Logger('debug');
-    // Now add some handlers
-    $logger->pushHandler(new StreamHandler(__DIR__.'/../../debug.log', Logger::DEBUG));
-    $logger->pushHandler(new FirePHPHandler());
 
-    // You can now use your logger
-    $logger->info($var);
+class DumpInLog
+{
+    /**
+     * Dump a variable in a log file for debugging purpose
+     * @param $var
+     * @throws Exception
+     */
+    public static function log($var): void
+    {
+        // Create the logger
+        $logger = new Logger('debug');
+        // Now add some handlers
+        $logger->pushHandler(new StreamHandler(__DIR__ . '/../../debug.log', Logger::DEBUG));
+        $logger->pushHandler(new FirePHPHandler());
+
+        // You can now use your logger
+        $logger->info(json_encode($var));
+    }
 }
