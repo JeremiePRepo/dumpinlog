@@ -1,0 +1,16 @@
+{
+  "name": "jeremiepasquis/dumpinlog",
+  "license": "BSD-3-Clause",
+  "description": "Dump a variable in a log file for debugging purpose",
+  "authors": [
+    {
+      "name": "Jeremie Pasquis",
+      "email": "jeremie@signalwow.fr"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "symfony/var-dumper": "^4.3",
+    "monolog/monolog": "^2.0"
+  }
+}
